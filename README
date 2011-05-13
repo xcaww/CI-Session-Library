@@ -1,0 +1,29 @@
+xSession
+CI Session Library
+Developed by Blake J
+Version: beta
+
+Instructions
+
+functions -
+* xsession->verify_login() ==> Process a login; call with form post headers.
+* xsession->gather_user_data() ==> Proccess the current user's session.
+* xsession->destroy_session() ==> Enough said.
+
+install -
+* The file 'add_to_config.php' contained in this package need it's configuration variables
+  added to the application's config. The 'xsession.php' goes in your application's libraries.
+* Database structure is included in this repo. (see: db.sql) It will be needed to store
+  user's and their session data.
+
+operation -
+* A POST request is sent to a url that calls  xsession->verify_login()  and the login
+  information is evaluated and then produces a session with cookies.
+* xsession->gather_user_data()  is called to check and gather the user's session data only
+  once the user has logged in and/or has an active session. If the session data provided
+  by the client is invalid and/or does not exist, the user will be redirected according to the
+  url in the library ('login/error/unauthorised').
+  
+future updates - 
+* A full working app that utilizes a login view, then a range of views to create
+  and manage session data. (in development)
