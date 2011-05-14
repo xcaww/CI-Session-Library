@@ -1,0 +1,279 @@
+body{
+	background-color: #0b5ca1;
+}
+
+p{
+	font-family: 'Trebuchet MS', Helvetica, sans-serif;
+	color: #323232;
+	padding: 0;
+	margin: 0;
+}
+
+h1{
+	font-family: 'Trebuchet MS', Helvetica, sans-serif;
+	color: #323232;
+	text-shadow: 0 1px 0 #1373c4;
+	font-size: 28pt;
+	margin-bottom: 6px;
+}
+
+h2{
+	margin: 0;
+	padding: 0;
+}
+
+/* Sessions */
+
+#sessions_container {
+	width: 970px;
+	margin: 25px auto 0;
+	padding: 14px;
+	padding-bottom: 1px;
+}
+
+#sessions_content {
+	font-family: 'Trebuchet MS', Helvetica, sans-serif;
+	background-color: #FFF;
+	border: none;
+	border-radius: 4px;
+	padding: 10px 5px 5px 5px;
+}
+
+#sessions_content h2 {	
+	font-family: 'Trebuchet MS', Helvetica, sans-serif;
+	background-color: #1b8ef0;
+	color: #FFF;
+	font-size: 15pt;
+	line-height: 15pt;
+	margin-top: 2px;
+	margin-bottom: 10px;
+	border-radius: 3px;
+	display: inline;
+	padding: 2px;
+}
+
+#sessions_content p {
+	color: #323232;
+	font-size: 12pt;
+}
+
+#sessions_content a{
+	color: #2c8cde;
+	text-decoration: none;
+	font-size: 10pt;
+	line-height: 10pt;
+}
+
+#sessions_content a:hover{
+	color: #0ea9fa;
+	text-decoration: underline;
+}
+
+#top_buttons{
+	float: right;
+	padding-right: 20px;
+}
+
+#top_buttons span{
+    background-repeat: no-repeat;
+    display: inline-block;
+    float: left;
+	margin-left: 5px;
+	margin-bottom: 10px;
+}
+
+#top_buttons span:hover{
+	cursor: pointer;
+}
+
+#top_buttons span.download_button{
+	background-image: url('../images/download_button.png');
+    width: 74px;
+    height: 20px;
+}
+
+#top_buttons span.add_button{
+	background-image: url('../images/add_button.png');
+    width: 40px;
+    height: 20px;
+}
+
+#top_buttons span.download_button:hover{
+	background-image: url('../images/download_button_hover.png');
+}
+
+#top_buttons span.add_button:hover{
+	background-image: url('../images/add_button_hover.png');
+	
+}
+
+#sessions_content table.overview{
+	width: 100%;
+	border-spacing: 0;
+}
+
+#sessions_content tr{
+	border:1px solid #000; 
+	margin-bottom:4px; 
+}
+	
+#sessions_content td.overview_title{	
+	padding-right: 2px;
+	font-weight: bold;
+	font-size: 11pt;
+}
+
+#sessions_content tr.overview_data{	
+	font-size: 10pt;
+	line-height: 11pt;
+}
+
+#sessions_content tr.options_divider{
+	height: 2px;
+	background-color: #cecece;
+	width: 100%;
+	line-height: 0;
+}
+
+#option_buttons span{
+    background-repeat: no-repeat;
+    display: inline-block;
+    float: left;
+	margin-right: 5px;
+	margin-bottom: 2px;
+	margin-top: 3px;
+}
+
+#option_buttons span:hover{
+	cursor: pointer;
+}
+
+#option_buttons span.all_button{
+	background-image: url('../images/all_buttons.png');
+    width: 33px;
+    height: 16px;
+}
+
+#option_buttons span.all_button:hover{
+	background-position: -33px 0px;
+}		
+
+#sessions_content input.checkbox
+{
+    background-position: -10px 0px;
+}
+
+#sessions_content input.checkbox, input.checkbox_clear
+{
+    background-image: url('../images/checkbox_buttons.png');
+	-webkit-appearance: none;
+	border: none;
+    background-repeat: no-repeat;
+    display: inline-block;
+    float: left;
+    width: 10px;
+    height: 10px;
+    padding: 0px;
+    margin: 0px;
+    cursor: hand;
+}
+
+/* Login */
+
+#login_container {
+	width: 270px;
+	margin: 25px auto 0;
+	padding: 14px;
+}
+
+#login_form {
+	font-family: 'Trebuchet MS', Helvetica, sans-serif;
+}
+
+#login_form input[type=text], input[type=password] {
+	width: 260px;
+	font-size: 15pt;
+	line-height: 22pt;
+	border: none;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	padding: 5px;
+	color: #777777;
+	margin-bottom: 8px;
+	outline: none;
+}
+
+#login_form input[type=submit]{
+	background-color: #074579;
+	margin: 0;
+	padding: 8px;
+	border: none;
+	-moz-border-radius: 4px;
+	border-radius: 4px;
+	float: right;
+	color: #f1ee18;
+	font-weight: bold;
+}
+
+#login_form input[type=submit]:hover {
+	background-color: #09508c;
+	cursor: pointer;
+}
+
+#login_form table{
+	border-spacing: 0;
+	margin: 0;
+	padding: 0;
+}
+
+#login_form td{
+	margin: 0;
+	padding: 0;
+}
+
+#login_form table a {
+	color: #f1ee18;
+	text-decoration: none;
+	font-size: 10pt;
+}
+
+#login_form table a:hover {
+	color: #0ea9fa;
+}
+
+#footer{
+	margin: 0 auto;
+	margin-top: 5px;
+	width: 970px;
+	text-align: center;
+	font-size: 9pt;
+}
+
+#footer p{
+	font-family: 'MS Sans Serif', Geneva, sans-serif;
+}
+
+#footer p.powered_by{
+	font-size: 11pt;
+}
+
+#footer a{
+	color: #2583d4;
+	text-decoration: none;
+}
+
+/* Error */
+
+#error_container{
+	width: 440px;
+	font-size: 10pt;
+	margin: 10px auto -20px;
+	padding: 5px;
+}
+
+#error_container p{
+	background-color: #ffe5e5;
+	border: 1px solid #ff7f7f;
+	margin: 0 auto;
+	padding: 2px;
+}

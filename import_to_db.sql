@@ -1,9 +1,3 @@
--- --------------------------------------------------------
--- xsession mySQL Database Structure
--- 
--- Author: Blake J
--- --------------------------------------------------------
-
 --
 -- Table structure for table `sessions`
 --
@@ -30,6 +24,11 @@ CREATE TABLE IF NOT EXISTS `users` (
   `password` varchar(32) NOT NULL,
   `email` varchar(50) NOT NULL,
   PRIMARY KEY (`ID`)
-) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=4 ;
+) ENGINE=InnoDB  DEFAULT CHARSET=latin1 AUTO_INCREMENT=2 ;
 
 --
+-- Dumping data for table `users`
+--
+
+INSERT INTO `users` (`ID`, `username`, `password`, `email`) VALUES
+(1, 'admin', '21232f297a57a5a743894a0e4a801fc3', 'admin@email.com');

@@ -11,10 +11,22 @@ functions -
 * xsession->destroy_session() ==> Enough said.
 
 install -
-* The file 'add_to_config.php' contained in this package need it's configuration variables
-  added to the application's config. The 'xsession.php' goes in your application's libraries.
-* Database structure is included in this repo. (see: db.sql) It will be needed to store
-  user's and their session data.
+* Database structure is included in this repo. (see: import_to_db.sql) It will be needed to store
+  user's and their session data. Import this into a database
+* In '/application/config/config.php', set these variable:
+  -  $config['base_url']
+  -  $config['xsession_session_table']
+  -  $config['xsession_users_table']
+* In '/applcation/config/database.php', set these variables:
+  -  $db['default']['hostname'] 
+  -  $db['default']['username']
+  -  $db['default']['password']
+  -  $db['default']['database']
+  
+update CodeIgniter -  
+* Download the latest CodeIgniter package from http://codeigniter.com/
+  Copy the 'system' folder from within the CodeIgniter package you downloaded, then paste
+  it in the 'application' folder in this folder (xSession application).
 
 operation -
 * A POST request is sent to a url that calls  xsession->verify_login()  and the login
@@ -24,6 +36,5 @@ operation -
   by the client is invalid and/or does not exist, the user will be redirected according to the
   url in the library ('login/error/unauthorised').
   
-future updates - 
-* A full working app that utilizes a login view, then a range of views to create
-  and manage session data. (in development)
+test -
+* Go to 'http://domain/login/' and use 'admin' for both username and password.

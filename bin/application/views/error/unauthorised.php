@@ -1,0 +1,1 @@
+<div id="error_container">	<p><span style="color: #ff2525;">Unauthorised Access</span>. Please login to continue...</p>	</div>
