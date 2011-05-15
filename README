@@ -22,6 +22,8 @@ install -
   -  $db['default']['username']
   -  $db['default']['password']
   -  $db['default']['database']
+* This app does contain a HTACCESS to create clean URLs (no '/index.php/' in your URL) but may
+  not work on every server. 
   
 update CodeIgniter -  
 * Download the latest CodeIgniter package from http://codeigniter.com/
