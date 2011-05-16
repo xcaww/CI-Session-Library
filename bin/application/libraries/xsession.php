@@ -236,7 +236,7 @@ class xsession {
 	
 	function update_user_data(){
 	
-		if((time() - $this->session_data['last_activity']) > 10){
+		if((time() - $this->session_data['last_activity']) > $this->object->config->item('xsession_session_time')){
 
 			$this->session_data['ip_address'] = $this->object->input->ip_address();
 			$this->session_data['user_agent'] = substr($this->object->input->user_agent(), 0, 50);

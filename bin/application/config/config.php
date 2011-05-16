@@ -366,8 +366,11 @@ $config['proxy_ips'] = '';
 |
 | xsession_session_table = Name of the database table for sessions
 | xsession_users_table = Name of the users table for sessions
+| xsession_session_time = Time (seconds) before a user's session must
+| be updated
 */
 $config['xsession_session_table'] = 'sessions';
 $config['xsession_users_table'] = 'users';
+$config['xsession_session_time'] = 180;
 /* End of file config.php */
 /* Location: ./application/config/config.php */
