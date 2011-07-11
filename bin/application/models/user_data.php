@@ -34,6 +34,7 @@ class User_data extends CI_Model {
 			
 			foreach($query->result_array() as $row_data){
 			
+				$user['sessions'][$i]['user_id'] = $row_data['user_id'];
 				$user['sessions'][$i]['session_id'] = $row_data['session_id'];
 				$user['sessions'][$i]['ip_address'] = $row_data['ip_address'];
 				$user['sessions'][$i]['user_agent'] = $row_data['user_agent'];

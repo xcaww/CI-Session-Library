@@ -266,7 +266,7 @@ class CI_Session {
 		// Before continuing, we need to determine if there is any custom data to deal with.
 		// Let's determine this by removing the default indexes to see if there's anything left in the array
 		// and set the session data while we're at it
-		foreach (array('session_id','ip_address','user_agent','last_activity','session_data','user_id') as $val)
+		foreach (array('session_id','ip_address','user_agent','last_activity') as $val)
 		{
 			unset($custom_userdata[$val]);
 			$cookie_userdata[$val] = $this->userdata[$val];
@@ -286,7 +286,7 @@ class CI_Session {
 
 		// Run the update query
 		$this->CI->db->where('session_id', $this->userdata['session_id']);
-		$this->CI->db->update($this->sess_table_name, array('last_activity' => $this->userdata['last_activity'], 'user_data' => $custom_userdata, 'session_data' => $this->userdata['session_data'], 'user_id' => $this->userdata['user_id']));
+		$this->CI->db->update($this->sess_table_name, array('last_activity' => $this->userdata['last_activity'], 'user_data' => $custom_userdata));
 
 		// Write the cookie.  Notice that we manually pass the cookie data array to the
 		// _set_cookie() function. Normally that function will store $this->userdata, but

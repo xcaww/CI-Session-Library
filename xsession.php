@@ -345,7 +345,7 @@ class xsession {
 	
 		$this->is_logging_in = true;
 		$this->object->db->where('username', $this->object->input->post('username'));
-		$this->object->db->where('password', md5($this->object->input->post('password')));
+		$this->object->db->where('password', md5($this->object->input->post('password') . $this->object->config->item('encryption_key')));
 		$query = $this->object->db->get($this->object->config->item('xsession_users_table'));
 
 		if($query->num_rows == 1){

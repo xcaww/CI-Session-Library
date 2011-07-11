@@ -1,0 +1,1 @@
+<div id="page_buttons">	<a href="<?php echo base_url(); ?>sessions/add_user"><div class="add" width="20px" height="20px" alt="add">&nbsp;</div><span>add user</span></a>	<a href="<?php echo base_url(); ?>sessions/search"><div class="search" width="20px" height="20px" alt="search">&nbsp;</div><span>search</span></a></div>

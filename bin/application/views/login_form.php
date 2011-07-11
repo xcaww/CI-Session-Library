@@ -4,7 +4,7 @@
 
 	<div id="login_form">
 	
-		<h1>Sign In</h1>
+		<h1 style="display: block";>Sign In</h1>
 		<?php
 		echo form_open('login/authenticate');
 		$username_input = array('name' => 'username', 'id' => 'username_field', 'value' => 'username', 'type' => 'text', 'onclick' => "removeText(this.id)");

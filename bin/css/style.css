@@ -15,6 +15,7 @@ h1{
 	text-shadow: 0 1px 0 #1373c4;
 	font-size: 28pt;
 	margin-bottom: 6px;
+	display: inline;
 }
 
 h2{
@@ -29,6 +30,60 @@ h2{
 	margin: 25px auto 0;
 	padding: 14px;
 	padding-bottom: 1px;
+}
+
+#page_buttons{
+	display: inline;
+	float: right;
+	margin-top: 12px;
+}
+
+#page_buttons a{
+    position:relative; /*this is the key*/
+    z-index:24;
+    text-decoration:none;
+}
+
+#page_buttons a:hover{
+	z-index:25; 
+}
+
+#page_buttons a span{
+	font-family: 'Trebuchet MS', Helvetica, sans-serif;
+	font-size: 10pt;
+	display: none;
+}
+
+#page_buttons a:hover span{ /*the span will display just on :hover state*/
+    display: block;
+    position: absolute;
+	bottom: 1.8em;
+	width: 200px;
+	color:#f4fc21;
+    text-align: left;
+}
+	
+#page_buttons div{
+	width: 20px;
+	height: 20px;
+	cursor: pointer;
+	display: inline-block;
+}
+
+#page_buttons .add{
+	background-image: url('../images/add.png');
+}
+
+#page_buttons .add:hover{
+	background-image: url('../images/add_hover.png');
+}
+
+#page_buttons .search{
+	background-image: url('../images/search.png');
+}
+
+#page_buttons .search:hover{
+	background-image: url('../images/search_hover.png');
 }
 
 #sessions_content {
@@ -158,14 +213,12 @@ h2{
 	background-position: -33px 0px;
 }		
 
-#sessions_content input.checkbox
-{
+#sessions_content input.checkbox{
     background-position: -10px 0px;
 }
 
-#sessions_content input.checkbox, input.checkbox_clear
-{
-    background-image: url('../images/checkbox_buttons.png');
+#sessions_content input.checkbox, input.checkbox_clear{
+    background: url('../images/checkbox_buttons.png');
 	-webkit-appearance: none;
 	border: none;
     background-repeat: no-repeat;
@@ -175,7 +228,20 @@ h2{
     height: 10px;
     padding: 0px;
     margin: 0px;
-    cursor: hand;
+    cursor: pointer;
+}
+
+#sessions_content input[type=checkbox]:checked + label {
+width: 20px;
+}
+
+table.user {
+	margin-top: 6px;
+}
+
+tr.user_data{
+	line-height: 11pt;
+	font-size: 11pt;
 }
 
 /* Login */
@@ -211,11 +277,12 @@ h2{
 	-moz-border-radius: 4px;
 	border-radius: 4px;
 	float: right;
-	color: #f1ee18;
+	color: #1c79c8;
 	font-weight: bold;
 }
 
 #login_form input[type=submit]:hover {
+	color: #f1ee18;
 	background-color: #09508c;
 	cursor: pointer;
 }
@@ -260,6 +327,14 @@ h2{
 #footer a{
 	color: #2583d4;
 	text-decoration: none;
+}
+
+#footer img{
+	border: none;
+}
+
+#footer a:hover{
+	color: #f4fc21;
 }
 
 /* Error */

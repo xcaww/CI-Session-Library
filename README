@@ -1,7 +1,7 @@
 xSession
 CodeIgniter Session Library
 Developed by Blake J
-Version: beta
+Version: beta 0.2
 
 Instructions
 
@@ -15,6 +15,7 @@ install -
   user's and their session data. Import this into a database
 * In '/application/config/config.php', set these variable:
   -  $config['base_url']
+  -  $config['encryption_key']
   -  $config['xsession_session_table']
   -  $config['xsession_users_table']
 * In '/applcation/config/database.php', set these variables:

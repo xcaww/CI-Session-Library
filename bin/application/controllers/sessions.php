@@ -41,7 +41,53 @@ class Sessions extends CI_Controller {
 	// edit/$function
 	public function edit(){
 	
+		$this->xsession->gather_user_data();
+		
+		if($this->uri->segment(3) == true){
+		
+			switch($this->uri->segment(3)){
+			
+				case 'user':
+					$this->load->model('user_data');
+					$data['user'] = $this->user_data->build_user_data($this->uri->segment(4));
+					$data['page_content'] = 'sessions_edit_user';
+					break;
+				case 'session';
+					//$this->load->model('session_data');
+					//$data['sessions'] = $this->session_data->build_session_data();
+					$data['page_content'] = 'sessions_edit_session';
+					break;
+				default:
+					redirect('sessions');
+					exit();
+					break;
+					
+			}
+			
+		}
+		
+		
+		$this->load->view('pagebits/page', $data);
+	
 	}
+	
+	// add
+	public function add_user(){
+	
+		$this->xsession->gather_user_data();
+		$data['page_content'] = 'sessions_add_user';
+		$this->load->view('pagebits/page', $data);
+		
+	}
+	
+	// search
+	public function search(){
+	
+		$this->xsession->gather_user_data();
+		$data['page_content'] = 'sessions_search';
+		$this->load->view('pagebits/page', $data);
+		
+	}	
 
 	
 }
