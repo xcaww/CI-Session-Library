@@ -5,14 +5,22 @@ Version: beta 0.2
 
 Instructions
 
+The session library itself is contained in the root of this repo as xsession.php
+Using the library a session manager was built to handle, edit and analyse user and 
+session info.
+
+################################
+# READ THE INSTALL NOTES BELOW #
+################################
+
 functions -
 * xsession->verify_login() ==> Process a login; call with form post headers.
 * xsession->gather_user_data() ==> Proccess the current user's session.
 * xsession->destroy_session() ==> Enough said.
 
 install -
-* Database structure is included in this repo. (see: import_to_db.sql) It will be needed to store
-  user's and their session data. Import this into a database
+* Database structure is included in this repo. (see: import_to_db.sql) It will be needed 
+  to store user's and their session data. Import this into a database
 * In '/application/config/config.php', set these variable:
   -  $config['base_url']
   -  $config['encryption_key']
@@ -23,21 +31,26 @@ install -
   -  $db['default']['username']
   -  $db['default']['password']
   -  $db['default']['database']
-* This app does contain a HTACCESS to create clean URLs (no '/index.php/' in your URL) but may
-  not work on every server. 
+* This app does contain a HTACCESS to create clean URLs (no '/index.php/' in your URL) 
+  but may not work on every server. Search the web for info about 'mod_rewrite' on Apache2
+  and see if your version of Apache can use it, then continue to search for how to install
+  it and enable it on your server. 
+  !Otherwise! search along the lines of 'how to remove index.php from codeigniter' and check
+  what modification was done to the source and reverse then reverse those modifications on your
+  source so index.php is then re-enabled.
   
 update CodeIgniter -  
 * Download the latest CodeIgniter package from http://codeigniter.com/
   Copy the 'system' folder from within the CodeIgniter package you downloaded, then paste
-  it in the 'application' folder in this folder (xSession application).
+  it in the 'application' folder in this folder (root).
 
 operation -
 * A POST request is sent to a url that calls  xsession->verify_login()  and the login
   information is evaluated and then produces a session with cookies.
 * xsession->gather_user_data()  is called to check and gather the user's session data only
   once the user has logged in and/or has an active session. If the session data provided
-  by the client is invalid and/or does not exist, the user will be redirected according to the
-  url in the library ('login/error/unauthorised').
+  by the client is invalid and/or does not exist, the user will be redirected according 
+  to the url in the library ('login/error/unauthorised').
   
 test -
 * Go to 'http://domain/login/' and use 'admin' for both username and password.

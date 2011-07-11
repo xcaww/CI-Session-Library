@@ -31,4 +31,4 @@ CREATE TABLE IF NOT EXISTS `users` (
 --
 
 INSERT INTO `users` (`ID`, `username`, `password`, `email`) VALUES
-(1, 'admin', '21232f297a57a5a743894a0e4a801fc3', 'admin@email.com');
+(1, 'admin', '62200c345b51aebcc74a0b788dce420d', 'admin@email.com');
